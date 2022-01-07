@@ -1,0 +1,64 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.cta {
+  background-color: v.$lightBlue;
+  padding: 10rem 2rem;
+  color: v.$white;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @include m.tablet { 
+      @include m.grid(2,1rem);
+      align-items: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    @include m.desktop { 
+      text-align:left;
+      max-width: 70%;
+    }
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: v.$secondaryFont;
+    @include m.desktop { 
+      font-size: 4rem;  
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include m.desktop { 
+      max-width: 90%;
+    }
+  }
+
+  &__camp {
+    border: 1px solid v.$darkBlue;
+    border-radius: .5rem;
+    padding: 1rem;
+    &::placeholder {
+      color: v.$lightGray;
+    }
+  }
+
+  &__btn {
+    @include m.btn(v.$lightGrayishBlue,v.$brightBlue);
+    @include m.desktop { 
+      max-width: 40%;
+    }
+  }
+}
+

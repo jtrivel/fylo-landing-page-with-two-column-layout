@@ -1,0 +1,96 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+  padding: 5rem 2rem;
+  background-color: v.$darkBlue;
+  color: v.$white;
+  @include m.desktop { 
+    padding: 10rem 2rem
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @include m.desktop { 
+      gap:2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @include m.desktop { 
+      flex-direction:row;
+      justify-content: space-between;
+      max-width: 90%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: v.$white;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: v.$cyan;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all 250ms ease;
+    }
+    &:hover::before{
+      transform: scaleX(1);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: center;
+    @include m.desktop { 
+      align-items: flex-start;
+    }
+  }
+
+  &__icons {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid v.$white;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .5s ease;
+    &:hover {
+      color: v.$cyan;
+      border: 1px solid v.$cyan;
+      transform: rotateY(90deg);
+    }
+  }
+
+}

@@ -1,0 +1,57 @@
+@use 'variables' as v;
+
+@mixin mobile {
+  @media(min-width: v.$mobile){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media(min-width: v.$tablet){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media(min-width: v.$desktop){
+    @content;
+  }
+}
+
+@mixin grid($col,$gap) {
+  display: grid;
+  grid-template-columns: repeat($col,1fr);
+  gap: $gap;
+}
+
+@mixin btn($color,$colorBg) {
+  padding: 1rem 2rem;
+  background-color: $colorBg;
+  color: $color;
+  border-radius: .5rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: lighten(v.$brightBlue,15%);
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transition: all 250ms ease;
+    transform-origin: left;
+    z-index: -1;
+    border-radius: -5rem;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
