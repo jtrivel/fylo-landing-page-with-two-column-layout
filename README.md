@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/huddle-landing-page-single-section-solution-with-grid-and-flexbox-Xh64DzTVJ)
-- Live Site URL: [Live Site URL](https://huddle-lading-page-with-single-section0001.netlify.app/)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/fylo-landing-page-solution-with-grid-and-flexbox-7Vz7wOQwP)
+- Live Site URL: [Live Site URL](https://fylo-landing-page-with-two-columns-layout0001.netlify.app/)
 
 ### Built with
 - Sass
