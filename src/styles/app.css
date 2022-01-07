@@ -537,10 +537,11 @@ ul {
 }
 .footer__socials {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   font-size: 1.6rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 @media (min-width: 1024px) {
   .footer__socials {
@@ -548,6 +549,11 @@ ul {
   }
 }
 .footer__icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__icon {
   cursor: pointer;
   width: 3rem;
   height: 3rem;
@@ -559,8 +565,11 @@ ul {
   border-radius: 50%;
   transition: all 0.5s ease;
 }
-.footer__icons:hover {
+.footer__icon:hover {
   color: #3c9f8f;
   border: 1px solid #3c9f8f;
   transform: rotateY(90deg);
+}
+.footer__attribution {
+  font-size: 1rem;
 }/*# sourceMappingURL=app.css.map */
